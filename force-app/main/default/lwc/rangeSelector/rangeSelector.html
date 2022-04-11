@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title="Range Selector">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-left_large">
+                <lightning-input type="date" name="startdate" class="startdate" label="Start Date" value={start_date} onchange={handleDateChange} required ></lightning-input>
+            </div>
+            <div class="slds-col slds-m-right_large">
+                <lightning-input type="date" name="enddate" class="enddate" label="End Date"  value={end_date} onchange={handleDateChange} required></lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-left_large">
+                <div class="slds-text-color_error slds-p-top_medium">No Of Days Selected : {range}</div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

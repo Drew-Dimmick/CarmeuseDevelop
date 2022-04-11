@@ -1,0 +1,33 @@
+/* .titleHeader {
+    color: rgb(rgb(76, 76, 80), green, blue) !important;
+    size: 10px !important;
+}
+
+.titleFooter {
+    color: rgb(rgb(0, 0, 252), green, blue) !important;
+    size: 10px !important;
+}
+
+.slds-card__header h2 {
+    color: rgb(rgb(76, 76, 80), green, blue) !important;
+    size: 10px !important;
+}
+
+:host {
+    --sds-c-card-heading-font-size: 20px;
+} */
+
+.orderFields {
+    display: block;
+    padding-left: 15px;
+    float: left;
+}
+
+.padding {
+    padding-left: 15px;
+}
+
+.inLineFormat {
+    display: block;
+    float: left;
+}

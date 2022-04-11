@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="" icon-name="standard:orders">
+        <div slot="title" class="titleFooter">
+            <h3 slot="title" class="slds-align_bottom">Order Details</h3>
+            <!-- <span class="slds-text-body_small slds-align_top">{orderNumber}</span> -->
+        </div>
+        <lightning-record-view-form 
+                record-id={recordId} 
+                object-api-name="Order">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-10 slds-p-left_medium">    
+                    <label class="slds-float--right">Order Number:</label>
+                    <br/>
+                    <label class="slds-float--right">Order Summary:</label>
+                </div>
+                <div class="slds-col slds-size_1-of-10">    
+                    <span class="slds-p-left_small">{orderNumber}</span>
+                    <br/>
+                    <span class="slds-p-left_small"><a onclick={navigateToOrderSummaryDetail}>{orderSummaryNumber}</a></span>
+                </div>
+                <div class="slds-col slds-size_1-of-8">
+                    
+                </div>
+                <div class="slds-col slds-size_1-of-10 slds-p-left_small">
+                    <label class="slds-float--right">Effective Date:</label>
+                    <br/>
+                    <label class="slds-float--right">Status:</label>
+                </div>
+                <div class="slds-col slds-size_1-of-10 slds-p-left_small">    
+                    <lightning-output-field field-name="EffectiveDate" class="" variant="label-hidden"></lightning-output-field>
+                    <span class="">{status}</span>
+                </div>
+                <div class="slds-col slds-size_1-of-8">
+                    
+                </div>
+                <div class="slds-col slds-size_1-of-10 slds-p-left_small">
+                    <label class="slds-float--right">Account:</label>
+                    <br/>
+                    <label class="slds-float--right">Order Owner:</label>
+                </div>
+                <div class="slds-col slds-size_1-of-10 slds-p-left_small">
+                    <lightning-output-field field-name="AccountId" class="" variant="label-hidden"></lightning-output-field>
+                    <lightning-output-field field-name="OwnerId" class="" variant="label-hidden"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+    <br/>
+</template>

@@ -1,0 +1,3 @@
+<apex:page >
+    <c:Car_OrderTemplate orderId="8013O0000024OhA"/>
+</apex:page>

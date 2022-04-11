@@ -1,0 +1,15 @@
+<template>
+
+    <template if:true={isResponse}>
+        <lightning-accordion allow-multiple-sections-open
+                                active-section-name={activeSections}>
+                                
+            <template for:each={wrapper.orderItemSummaryWrapperList} for:item = "productInstance">
+                <c-carmeuse-cancel-order-accordion-section product-instance ={productInstance} 
+                                                           order-id ={wrapper.orderSummaryDetails.originalOrderId}
+                                                           key ={productInstance.productCode} >
+                </c-carmeuse-cancel-order-accordion-section>
+            </template>
+        </lightning-accordion>
+    </template>
+</template>

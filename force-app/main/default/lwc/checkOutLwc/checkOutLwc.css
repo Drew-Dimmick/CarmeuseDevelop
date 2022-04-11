@@ -1,0 +1,20 @@
+.fixHieght {
+    min-height: 300px !important;
+}
+
+div[commerce_checkout-orderaddress_orderaddress] > .slds-radio_faux,
+.slds-radio_faux {
+    display: none !important;
+}
+
+.slds-radio_faux {
+    display: none !important;
+}
+
+.slds-form-element__label {
+    color: red !important;
+}
+
+.hide {
+    display: none !important;
+}

@@ -1,0 +1,13 @@
+<template>
+    <h2> Order Summaries</h2>
+    <template if:true={orderList}>
+        <lightning-datatable 
+            data={orderList} 
+            columns={columns} 
+            key-field="id">
+        </lightning-datatable>
+    </template>
+    <!-- <template if:true={error}>
+        {error}
+    </template> -->
+</template>

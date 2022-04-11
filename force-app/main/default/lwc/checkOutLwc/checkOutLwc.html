@@ -1,0 +1,40 @@
+<template>
+  <template if:true={show}>
+    <template for:each={listOfProductItems} for:item="eachItem">
+      <c-split-shipment-product-details key={eachItem}
+                                          index ={eachItem}
+                                          record-id={recordId}
+                                          map-of-product-id-vs-name={mapOfProductIdVsName}
+                                          map-of-product-name-vs-id={mapOfProductNameVsId}
+                                          cart-item-clone ={cartItemAvailable}
+                                          onupdateproductdetails ={handleProductDetailsAddition}
+                                          map-of-index-vs-product-detail ={mapOfIndexVsProductDetail}
+                                          onupdateselectionmap={handleUpdateSelectionMap}
+                                          ondeleteproduct={handleDeleteProduct}
+                                          onupdatesubmitbutton={updateSubmitButton}
+                                          onactivateaddproductsbutton={updateAddProductsButton}
+                                          map-of-product-id-vs-available ={mapOfProductIdVsAvailable}
+                                          default-data={defaultData}>
+      </c-split-shipment-product-details>
+    </template>
+  </template>
+  <lightning-button name="Add Products"
+                      label="Add Products"
+                      if:true={showAddProductButtons}
+                      class="slds-m-top_large addProducts"
+                      onclick={addLineItems}
+                      disabled=true
+                      >
+
+  </lightning-button>
+
+  <lightning-button name="Submit"
+                      label="Submit"
+                      class="slds-m-top_large submit"
+                      variant="brand"
+                      onclick={handleSubmit}
+                      disabled=true>
+
+  </lightning-button>
+
+</template>
